@@ -85,27 +85,18 @@ WSGI_APPLICATION = 'FoodBank.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': env('DATABASE_ENGINE'),
-#         'NAME': env('DATABASE_NAME'),
-#         'USER': env('DATABASE_USER_NAME'), 
-#         'PASSWORD': env('DATABASE_USER_PASSWORD'), 
-#         'PORT': env('DATABASE_PORT'),
-#         'HOST': env('DATABASE_HOST_NAME'), 
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'food_bank',
-        'USER':'postgres',
-        'PASSWORD': 'postgres',
-        'HOST':'localhost',
-        'PORT':5432
+        'ENGINE': env('DATABASE_ENGINE'),
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER_NAME'), 
+        'PASSWORD': env('DATABASE_USER_PASSWORD'), 
+        'PORT': env('DATABASE_PORT'),
+        'HOST': env('DATABASE_HOST_NAME'), 
     }
 }
+
+
 
 
 # Password validation
@@ -161,5 +152,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'hembade.ravi.test@gmail.com'
-EMAIL_HOST_PASSWORD = 'icpzjjmptorverhc'
+EMAIL_HOST_USER = 'your email'
+EMAIL_HOST_PASSWORD = 'your password'
